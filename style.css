@@ -22,7 +22,7 @@ body{
 
 body> img{
     position: absolute;
-    bottom: -14%;
+    bottom: -4%;
     left: 0;
 }
 
@@ -34,6 +34,8 @@ body> img{
     grid-template-columns: 40% 1fr;
     z-index: 2;
     gap: 2rem;
+    position: relative;
+    top: -3rem;
 }
 
 .boxes > div{
@@ -45,7 +47,7 @@ body> img{
     place-items: start;
     gap: .5rem;
     border-top-right-radius:70px ;
-    padding: 2rem 5rem 2rem 2rem;
+    padding: 3rem 5rem 3rem 2rem;
 }
 .boxes > div.leftContent >img{
     transform: scale(.6);
@@ -88,7 +90,7 @@ body> img{
 .boxes > div.rightContent .range{
     position: relative;
     width: 80%;
-    height: 10px;
+    height: 17px;
     border-radius: 10px;
     background-color: var(--VeryDarkBlue);
     display: grid;
@@ -103,7 +105,7 @@ body> img{
    justify-content: end;
    align-items: center;
    width: 70%;
-   height: 90%;
+   height: 100%;
    border-radius: 10px;
    animation: show 3s;
 }
@@ -121,11 +123,14 @@ body> img{
 }
 .boxes > div.rightContent .range .innerSpan span{
     position: absolute;
-    width: 10px;
+    width: 15px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    height: 10px;
+    height: 15px;
     margin-left: auto;
+}
+.boxes > div.rightContent{
+    padding: .51rem;
 }
 .boxes > div.rightContent > *{
     margin-top: 0;
