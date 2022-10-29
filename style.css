@@ -35,7 +35,7 @@ body> img{
     z-index: 2;
     gap: 2rem;
     position: relative;
-    top: -3rem;
+    top: -1rem;
 }
 
 .boxes > div{
@@ -82,9 +82,13 @@ body> img{
 }
 .boxes > div.rightContent >p{
     align-self: start;
+    font-size: .7rem;
     margin-left: 3rem;
     margin-bottom: 1rem;
-    color: rgb(228, 220, 220);
+    color: rgb(189, 185, 185);
+}
+.boxes > div.rightContent >p>span{
+    color: white;
 }
 
 .boxes > div.rightContent .range{
@@ -148,29 +152,19 @@ body> img{
 
 .boxes > div.rightContent .popup{
     background-color: rgb(255, 255, 255);
-    font-size: 1.52rem;
+    font-size: 2.5rem;
     font-weight: bolder;
     position: absolute;
-    top: -1rem;
+    top: -3rem;
     right: 12%;
-    border-radius: 5px;
+    border-radius: 10px;
     height: 40px;
     display: flex;
-    padding: .1rem 1rem;
+    padding: 1rem 2rem;
     align-items: center;
     animation: popup 4s;
-    transition: all 1s ease-in-out;
 }
 
-@keyframes popup {
-    0%{
-        display: none;
-    }
-
-    100%{
-        display: flex;
-    }
-}
 .boxes > div.rightContent .popup span{
   font-weight: lighter;
   font-size: .71rem;
@@ -205,7 +199,8 @@ body> img{
     }
     .boxes > div.rightContent .popup{
         top: 87%;
-        right: 33%;
+        right: 19%;
+        font-size: 1.5rem;
       
     }
     .boxes > div.rightContent .popup::before{
