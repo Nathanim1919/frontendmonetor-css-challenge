@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root{
+--PaleBlue: hsl(243, 100%, 93%);
+--GrayishBlue: hsl(229, 7%, 55%);
+--DarkBlue: hsl(228, 56%, 26%);
+--VeryDarkBlue: hsl(229, 57%, 11%);
+}
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--VeryDarkBlue);
+    display: grid;
+    place-items: center;
+}
+
+body> img{
+    position: absolute;
+    bottom: -14%;
+    left: 0;
+}
+
+.boxes{
+    background-color: transparent;
+    width: 70vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    z-index: 2;
+    gap: 2rem;
+}
+
+.boxes > div{
+    background-color: var(--DarkBlue);
+}
+.boxes > div.leftContent{
+    border-radius: 10px;
+    display: grid;
+    place-items: start;
+    gap: .5rem;
+    border-top-right-radius:70px ;
+    padding: 2rem 5rem 2rem 2rem;
+}
+.boxes > div.leftContent >img{
+    transform: scale(.6);
+    margin-left: -1.5rem;
+}
+.boxes > div.leftContent .icons{
+    display: flex;
+    justify-content: start;
+    gap: .41rem;
+    align-items: center;
+   
+}
+.boxes > div.leftContent .icons>img{
+    background-color: black;
+    transform: scale(.92);
+    width: 25px;
+    height: 25px;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.boxes > div.rightContent{
+    height: 70%;
+    align-self: end;
+    padding: .62rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+}
+.boxes > div.rightContent >p{
+    align-self: start;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    color: rgb(228, 220, 220);
+}
+
+.boxes > div.rightContent .range{
+    position: relative;
+    width: 80%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--VeryDarkBlue);
+    display: grid;
+    align-items: center;
+}
+
+.boxes > div.rightContent .range .innerSpan{
+   background: linear-gradient(to bottom right,rgb(230, 131, 136),rgb(182, 62, 102));
+   position: absolute;
+   z-index: 2;
+   display: flex;
+   justify-content: end;
+   align-items: center;
+   width: 70%;
+   height: 90%;
+   border-radius: 10px;
+   animation: show 3s;
+}
+
+@keyframes show {
+
+    0%{
+        width: 10%;
+    }
+
+    100%{
+        width: 70%;
+    }
+    
+}
+.boxes > div.rightContent .range .innerSpan span{
+    position: absolute;
+    width: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 10px;
+    margin-left: auto;
+}
+.boxes > div.rightContent > *{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.boxes > div.rightContent .values{
+    display: flex;
+    color: rgb(233, 227, 227);
+    font-weight: lighter;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+.boxes > div.rightContent .popup{
+    background-color: rgb(255, 255, 255);
+    font-size: 1.52rem;
+    font-weight: bolder;
+    position: absolute;
+    top: -1rem;
+    right: 12%;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    padding: .1rem 1rem;
+    align-items: center;
+    animation: popup 4s;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes popup {
+    0%{
+        display: none;
+    }
+
+    100%{
+        display: flex;
+    }
+}
+.boxes > div.rightContent .popup span{
+  font-weight: lighter;
+  font-size: .71rem;
+}
+
+.boxes > div.rightContent .popup::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border: solid 10px white;
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px transparent;
+    position: absolute;
+    bottom: -1rem;
+    right: 0;
+
+}
+
+
+@media screen and (max-width:500px){
+    .boxes{
+        background-color: transparent;
+        width: 70vw;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        z-index: 2;
+        gap: 2rem;
+    }
+    .boxes > div.rightContent{
+        padding: 2rem ;
+    }
+    .boxes > div.rightContent .popup{
+        top: 87%;
+        right: 33%;
+      
+    }
+    .boxes > div.rightContent .popup::before{
+       width: 0;
+       border-width: 0;
+    }
+}
